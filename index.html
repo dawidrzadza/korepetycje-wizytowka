@@ -1,0 +1,261 @@
+p<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korepetycje - Matematyka i Fizyka</title>
+    
+    <!-- Dołączenie biblioteki Tailwind CSS (odpowiada za wygląd) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Dołączenie czcionki Inter z Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Dołączenie ikon FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Konfiguracja Tailwind (nasze kolory główne) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- NAWIGACJA (Menu na górze) -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo / Nazwa -->
+                <div class="flex-shrink-0 flex items-center font-bold text-xl text-brand-900">
+                    <i class="fa-solid fa-square-root-variable mr-2 text-brand-600"></i>
+                    MatFiz Inżynier
+                </div>
+                <!-- Linki menu (ukryte na bardzo małych ekranach dla uproszczenia) -->
+                <div class="hidden sm:flex space-x-8">
+                    <a href="#omnie" class="text-slate-600 hover:text-brand-600 transition-colors font-medium">O mnie</a>
+                    <a href="#zakres" class="text-slate-600 hover:text-brand-600 transition-colors font-medium">Zakres</a>
+                    <a href="#cennik" class="text-slate-600 hover:text-brand-600 transition-colors font-medium">Cennik</a>
+                    <a href="#kontakt" class="bg-brand-600 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition-colors font-medium shadow-sm">
+                        Kontakt
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SEKCJA GŁÓWNA (Hero) -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-100 text-brand-600 font-semibold text-sm mb-6">
+                Online & Stacjonarnie (Tychy/Gliwice)
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                Zrozum Matematykę i Fizykę. <br class="hidden md:block">
+                <span class="text-brand-600">Bez wkuwania na pamięć.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+                Skuteczne korepetycje od szkoły średniej aż po trudne przedmioty inżynieryjne. Analiza matematyczna, Obwody RLC, Statyka, Dynamika, Kinematyka, przygotowanie do matury, i wiele innych.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#kontakt" class="bg-brand-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-brand-700 hover:shadow-lg transition-all duration-200">
+                    Umów pierwszą lekcję
+                </a>
+                <a href="#zakres" class="bg-white text-slate-700 px-8 py-3 rounded-xl font-semibold border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-200">
+                    Zobacz zakres materiału
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCJA O MNIE -->
+    <section id="omnie" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="2479189d-7ecb-4376-bd48-a10fd1abcfab.jpg" alt="Dawid Rządza - Korepetytor" class="rounded-2xl shadow-xl border-4 border-brand-50 w-full max-w-md mx-auto object-cover aspect-[4/5] object-top">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Cześć! Dlaczego uczę z pasją?</h2>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                        Jestem studentem Automatyki i Robotyki na Wydziale AEI Politechniki Śląskiej (specjalność Automatyzacja i Eksploatacja Budynków - AEB). Matematyka i fizyka to dla mnie nie tylko sucha teoria, ale narzędzia, których na co dzień używam w inżynierii i programowaniu. Dzięki temu potrafię wytłumaczyć nawet najtrudniejsze zagadnienia (od przygotowań do matury po równania różniczkowe na studiach) w sposób praktyczny, cierpliwy i w bezstresowej atmosferze.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-slate-700">
+                            <i class="fa-solid fa-check text-green-500 w-6"></i>
+                            Kilkanaście zadowolonych studentów inżynierii
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fa-solid fa-check text-green-500 w-6"></i>
+                            Elastyczne godziny (online na Discord)
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fa-solid fa-check text-green-500 w-6"></i>
+                            Notatki w formacie PDF po każdych zajęciach
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCJA ZAKRES MATERIAŁU -->
+    <section id="zakres" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">W czym mogę Ci pomóc?</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">Specjalizuję się w przedmiotach ścisłych i inżynieryjnych.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Karta 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-infinity text-2xl text-brand-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Matematyka Wyższa</h3>
+                    <ul class="text-slate-600 space-y-2">
+                        <li>• Analiza matematyczna (granice, całki, pochodne, ciągi)</li>
+                        <li>• Algebra liniowa</li>
+                        <li>• Równania różniczkowe</li>
+                        <li>• Liczby zespolone</li>
+                    </ul>
+                </div>
+                
+                <!-- Karta 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-microchip text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Fizyka i Inżynieria</h3>
+                    <ul class="text-slate-600 space-y-2">
+                        <li>• Teoria obwodów (Kirchhoff, metoda oczkowa/węzłowa, metoda operatorowa/symboliczna)</li>
+                        <li>• Prąd stały i zmienny</li>
+                        <li>• Fizyka ogólna (kinematyka, dynamika, statyka)</li>
+                        <li>• Transformata Laplace'a</li>
+                    </ul>
+                </div>
+
+                <!-- Karta 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-graduation-cap text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Liceum & Matura</h3>
+                    <ul class="text-slate-600 space-y-2">
+                        <li>• Matura rozszerzona (Matematyka)</li>
+                        <li>• Matura podstawowa (Matematyka)</li>
+                        <li>• Matura rozszerzona (Fizyka)</li>
+                        <li>• Bieżąca pomoc w liceum/technikum</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKCJA CENNIK -->
+    <section id="cennik" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Proste i przejrzyste zasady</h2>
+                <p class="text-slate-600 text-lg">Płacisz za konkretną wiedzę i efekty.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <!-- Cennik Liceum -->
+                <div class="border-2 border-slate-100 rounded-2xl p-8 hover:border-brand-500 transition-colors">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Poziom Szkoły Średniej</h3>
+                    <p class="text-slate-500 mb-6">Przygotowanie do sprawdzianów i matury.</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-brand-600">70 zł</span>
+                        <span class="text-slate-500"> / pełna godz. zegarowa</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-600 mb-8">
+                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i> Materiały własne</li>
+                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i> Zadania domowe do weryfikacji</li>
+                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i> Konsultacje SMS przed sprawdzianem</li>
+                    </ul>
+                </div>
+
+                <!-- Cennik Studia -->
+                <div class="border-2 border-slate-100 rounded-2xl p-8 hover:border-brand-500 transition-colors">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Poziom Akademicki</h3>
+                    <p class="text-slate-500 mb-6">Analiza, obwody, kolokwia, sesja.</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-brand-600">100 zł</span>
+                        <span class="text-slate-500"> / pełna godz. zegarowa</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-600 mb-8">
+                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i> Trudne przykłady krok po kroku</li>
+                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i> Tłumaczenie do skutku</li>
+                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i> Analiza arkuszy z poprzednich lat</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center text-slate-500 mt-8 text-sm">
+                * Zajęcia stacjonarne na terenie Tychów lub Gliwic (kampus PŚ) mogą wymagać indywidualnych ustaleń.
+            </p>
+        </div>
+    </section>
+
+    <!-- SEKCJA KONTAKT -->
+    <section id="kontakt" class="py-20 bg-brand-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Zaczynamy naukę?</h2>
+            <p class="text-brand-100 text-lg mb-12 max-w-2xl mx-auto">
+                Zadzwoń do mnie lub napisz. Jeśli nie odbieram, zostaw SMS, a oddzwonię najszybciej jak to możliwe.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+                <!-- Telefon -->
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4 hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-phone text-2xl text-brand-300"></i>
+                    </div>
+                    <p class="text-brand-200 text-sm mb-1">Telefon / SMS</p>
+                    <a href="tel:+48783955442" class="text-2xl font-bold hover:text-brand-300 transition-colors">+48 783 955 442</a>
+                </div>
+                
+                <!-- Email -->
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4 hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-envelope text-2xl text-brand-300"></i>
+                    </div>
+                    <p class="text-brand-200 text-sm mb-1">E-mail</p>
+                    <a href="mailto:dawidrzadza18@gmail.com" class="text-2xl font-bold hover:text-brand-300 transition-colors">dawidrzadza18@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center gap-4 text-brand-200">
+                <i class="fa-solid fa-location-dot text-xl"></i>
+                <span>Zajęcia online (cała Polska) oraz stacjonarnie: Tychy / Gliwice (Kampus PŚ)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- STOPKA -->
+    <footer class="bg-slate-900 py-6 border-t border-slate-800 text-center">
+        <p class="text-slate-400 text-sm">
+            &copy; 2026 Dawid Rządza. Wszelkie prawa zastrzeżone. <br>
+            Wizytówka stworzona z myślą o studentach i uczniach.
+        </p>
+    </footer>
+
+</body>
+</html>
